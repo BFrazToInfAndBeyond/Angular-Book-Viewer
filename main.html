@@ -1,0 +1,14 @@
+<div>
+  <form name="searchBook" ng-submit="search(query)">
+    <input type="search" required="" ng-model="query" name="Search here" />
+    <input type="submit" value="Search" />
+  </form>
+
+  Filter by: 
+ <select ng-model="filter">
+    <option value="Author">Author</option>
+    <option value="Subject">Subject</option>
+    <option value="Title">Title</option>
+    <option value="Isbn">Isbn</option>
+  </select>
+</div>

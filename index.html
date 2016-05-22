@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html ng-app="bookViewer">
+
+  <head>
+    <script data-require="angular.js@1.5.5" data-semver="1.5.5" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+    <script data-require="angular-route@1.4.8" data-semver="1.4.8" src="https://code.angularjs.org/1.4.8/angular-route.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <script src="app.js"></script>
+    <script src="MainController.js"></script>
+    <script src="AuthorController.js"></script>
+    <script src="SubjectController.js"></script>
+    <script src="TitleController.js"></script>
+    <script src="IsbnController.js"></script>
+    <script src="bookApi.js"></script>
+  </head>
+
+  <body>
+    <h1>Book Viewer</h1>
+    <div ng-view=""></div>
+  </body>
+
+</html>

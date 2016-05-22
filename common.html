@@ -1,0 +1,32 @@
+<div>
+  {{error}}
+  <br>
+  <a href="#/main">Back to search</a>
+  <ul>
+    <li ng-repeat="item in results.items">
+      Title: {{item.volumeInfo.title}}
+      <br>
+      <img src="{{item.volumeInfo.imageLinks.thumbnail}}" alt="{{item.volumeInfo.title}}">
+      <div ng-show="item.volumeInfo.authors">
+        <br>Authors:
+        <ul>
+          <li ng-repeat="author in item.volumeInfo.authors">
+            <a href="#/author/{{author}}">{{author}}</a>
+          </li>
+        </ul>
+      </div>
+      <div ng-show="item.volumeInfo.categories">
+        <br>Categories:
+        <ul>
+          <li ng-repeat="category in item.volumeInfo.categories">
+            <a href="#/subject/{{category}}">{{category}}</a>
+          </li>
+        </ul>
+      </div>
+      <br>
+      <a ng-href="" ng-click="redirectToMoreInfo(item.volumeInfo.infoLink)">See More Info</a>
+      <br>
+      <br>
+    </li>
+  </ul>
+</div>
